@@ -1,0 +1,9 @@
+$lightPurple: rgb(176, 116, 255);
+$darkPurple: rgb(71, 2, 160);
+$yellow: rgb(252, 255, 82);
+
+@mixin fontSize($sizeValue) {
+  font-size: $sizeValue;
+  color: blue;
+  font-weight: bold;
+}
