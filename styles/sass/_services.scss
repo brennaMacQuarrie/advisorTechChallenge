@@ -71,6 +71,13 @@
             display: block;
         }
     }
+// mixin:: return to column view
+    @include media-breakpoint-down(xs) {
+        .left {
+            flex-direction: column;
+            margin-top: 0;
+        }
+    }
 }
 
 
