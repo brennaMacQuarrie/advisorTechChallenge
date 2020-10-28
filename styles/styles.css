@@ -6897,9 +6897,8 @@ a.close.disabled {
 .carousel-control-prev,
 .carousel-control-next {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
+  top: 20px;
+  z-index: 90;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6961,7 +6960,7 @@ a.close.disabled {
 .carousel-indicators {
   position: absolute;
   right: 0;
-  bottom: 0;
+  top: 20px;
   left: 0;
   z-index: 15;
   display: -webkit-box;
@@ -7011,13 +7010,15 @@ a.close.disabled {
 .carousel-caption {
   position: absolute;
   right: 15%;
-  bottom: 20px;
+  top: 20px;
   left: 15%;
   z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
   color: #fff;
   text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: 2px 2px 5px #212529;
 }
 
 @-webkit-keyframes spinner-border {
@@ -11085,6 +11086,7 @@ p {
   margin: 0;
 }
 
+/* With LESS */
 header {
   overflow: hidden;
   border: double white 2px;
@@ -11097,15 +11099,30 @@ header img {
 }
 
 .services {
-  padding: 50px 0 75px;
+  padding: 40px 0 75px;
   background: #212529;
   color: white;
   -webkit-clip-path: polygon(100% 0, 100% 82%, 50% 100%, 0 82%, 0 0);
           clip-path: polygon(100% 0, 100% 82%, 50% 100%, 0 82%, 0 0);
 }
 
+.services .toggleView {
+  opacity: 0;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  text-align: center;
+  color: #54BBF9;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.services .toggleView.active {
+  opacity: 1;
+}
+
 .services .service {
   font-size: clamp(1.3rem, 1.5rem, 2rem);
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11119,7 +11136,6 @@ header img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
 }
 
 .services .service h2 {
@@ -11176,21 +11192,32 @@ header img {
 }
 
 .sectionTwo {
-  padding: 40px 0;
+  padding: 50px 0;
+}
+
+.sectionTwo iframe {
+  border: 1px black solid;
 }
 
 .sectionTwo .contact {
-  background: transparent;
-  padding: 0;
+  height: 230px;
 }
 
 .sectionTwo .contact h3 {
   font-family: 'Cinzel', serif;
+  text-decoration: underline;
 }
 
 .sectionTwo .contact div {
   border: 1px black solid;
+  border-top: 3px black solid;
   text-align: center;
+  padding-top: 5px;
+}
+
+.sectionTwo .contact .info {
+  overflow: scroll;
+  font-size: clamp(1.2rem, 1.5rem, 2rem);
 }
 
 footer {
