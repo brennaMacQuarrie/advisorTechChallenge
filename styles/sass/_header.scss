@@ -2,8 +2,15 @@ header {
     overflow: hidden;
     border: double white 2px;
     height: 40vh;
-    
     img {
         transform: translateY(-15%);
+    }
+
+}
+
+
+@include media-breakpoint-down(xs) {
+    header {
+        height: 20vh;
     }
 }

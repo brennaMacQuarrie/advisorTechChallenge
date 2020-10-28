@@ -6960,7 +6960,7 @@ a.close.disabled {
 .carousel-indicators {
   position: absolute;
   right: 0;
-  top: 20px;
+  top: 0;
   left: 0;
   z-index: 15;
   display: -webkit-box;
@@ -7009,8 +7009,8 @@ a.close.disabled {
 
 .carousel-caption {
   position: absolute;
+  top: 40px;
   right: 15%;
-  top: 20px;
   left: 15%;
   z-index: 10;
   color: #fff;
@@ -7019,6 +7019,7 @@ a.close.disabled {
   font-weight: bold;
   font-style: italic;
   text-shadow: 2px 2px 5px #212529;
+  padding-top: 10px;
 }
 
 @-webkit-keyframes spinner-border {
@@ -11098,6 +11099,12 @@ header img {
           transform: translateY(-15%);
 }
 
+@media (max-width: 575.98px) {
+  header {
+    height: 20vh;
+  }
+}
+
 .services {
   padding: 40px 0 75px;
   background: #212529;
@@ -11146,13 +11153,14 @@ header img {
 }
 
 .services .service .circle {
-  border: 1px white solid;
-  font-size: clamp(1.5rem, 1.8rem, 2.5rem);
-  text-align: center;
+  cursor: pointer;
   height: 40px;
   width: 40px;
   margin: 10px;
+  border: 1px white solid;
   border-radius: 50%;
+  font-size: clamp(1.5rem, 1.8rem, 2.5rem);
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11200,6 +11208,7 @@ header img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    text-align: center;
     margin-top: 0;
   }
 }

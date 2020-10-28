@@ -3,7 +3,7 @@
     background: $gray-900;
     color: white;
     clip-path: polygon(100% 0, 100% 82%, 50% 100%, 0 82%, 0 0);
-
+    // jquery toggle
     .toggleView {
         opacity: 0;
         transition: 0.5s all;
@@ -33,13 +33,15 @@
         }
 
         .circle {
-            border: 1px white solid;
-            font-size: clamp(1.5rem, 1.8rem, 2.5rem);
-            text-align: center;
+            cursor: pointer;
             height: 40px;
             width: 40px;
             margin: 10px;
+            border: 1px white solid;
             border-radius: 50%;
+
+            font-size: clamp(1.5rem, 1.8rem, 2.5rem);
+            text-align: center;
 
             display: flex;
             justify-content: center;
@@ -78,6 +80,7 @@
     @include media-breakpoint-down(xs) {
         .left {
             flex-direction: column;
+            text-align: center;
             margin-top: 0;
         }
     }
