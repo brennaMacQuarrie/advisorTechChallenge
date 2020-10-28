@@ -9,6 +9,14 @@
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <!-- link favicon -->
     <link type="image/ico" href="#" rel="icon">
+
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <!-- link google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Raleway:ital,wght@0,300;1,200&display=swap" rel="stylesheet">
     <!-- link icons -->
     <script src="https://kit.fontawesome.com/4fba6b96fc.js" crossorigin="anonymous"></script>
     <!-- link css -->
@@ -18,59 +26,91 @@
 <body>
 
     <header>
-        <div class="slider">
-            <!-- images and text -->
-        </div>
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="./assets/pexels-anna-shvets-3727464.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./assets/pexels-cottonbro-3944405.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./assets/pexels-energepiccom-2988232.jpg" alt="Third slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
     </header>
 
     <main>
-
-        <section class="container row">
-            <!-- four services with icons, h2s, ps -->
-            <div class="retirement col-sm">
-                <i class="far fa-bookmark"></i>
-                <h3>Retirement Planning</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis molestiae nemo perferendis similique qui.</p>
-            </div>
-            <div class="insurance col-sm">
-                <i class="fas fa-heartbeat"></i>
-                <h3>Life Insurance</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci praesentium sunt doloremque maiores! Ut assumenda repudiandae, aperiam veniam minus!</p>
-            </div>
-            <div class="invest col-sm">
-                <i class="fas fa-funnel-dollar"></i>
-                <h3>Invest With Us</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus neque ex reiciendis, facere excepturi omnis placeat molestias temporibus.</p>
-            </div>
-            <div class="retirement col-sm">
-                <i class="fas fa-search-dollar"></i>
-                <h3>Tax Preparation</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, aliquam possimus dolores obcaecati a officiis illo.</p>
+        <section class="services">
+            <div class="container">
+                <div class="row align-items-start">
+                    <div class="service col-md col-sm">
+                        <div class="circle">
+                            <i class="far fa-bookmark"></i>
+                        </div>
+                        <h2>Retirement Planning</h2>
+                        <p class="hide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis molestiae nemo perferendis similique qui.</p>
+                    </div>
+                    <div class="service col-md col-sm">
+                        <div class="circle">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h2>Life Insurance</h2>
+                        <p class="hide">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci praesentium sunt doloremque!</p>
+                    </div>
+                    
+                    <div class="service col-md-3 row-sm">
+                        <div class="circle">
+                            <i class="fas fa-funnel-dollar"></i>
+                        </div>
+                        <h2>Invest With Us</h2>
+                        <p class="hide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus neque ex reiciendis, facere excepturi.</p>
+                    </div>
+                    <div class="service col-md-3 row-sm">
+                        <div class="circle">
+                            <i class="fas fa-search-dollar"></i>
+                        </div>
+                        <h2>Tax Preparation</h2>
+                        <p class="hide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, aliquam possimus dolores obcaecati a officiis illo.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
 
-        <section class="visual">
-            <div class="container row">
-                <div class="video col-sm">
-                    <iframe allowtransparency="true" title="Wistia video player" allowFullscreen frameborder="0" scrolling="no"
+        <section class="sectionTwo">
+            <div class="container">
+                <div class="row col-sm align-items-center">
+                    <div class="col">
+                        <iframe allowtransparency="true" title="Wistia video player" allowFullscreen frameborder="0" scrolling="no"
                         class="wistia_embed" name="wistia_embed" src="https://fast.wistia.net/embed/iframe/o5nik15hjc" width="400"
                         height="225"></iframe>   
-                </div>
-    
-                <div class="items col-sm">
-                    <!-- four items -->
-                    <div>
-                        <p>About Us</p>
                     </div>
-                    <div>
-                        <p>Contact</p>
-                    </div>
-                    <div>
-                        <p>Resources</p>
-                    </div>
-                    <div>
-                        <p>Client Center</p>
+        
+                    <div class="contact no-gutters col">
+                        <div class="col">
+                            <div class="row-3">
+                                <p>About Us</p>
+                            </div>
+                            <div class="row-3">
+                                <p>Contact</p>
+                            </div>
+                            <div class="row-3">
+                                <p>Resources</p>
+                            </div>
+                            <div class="row-3">
+                                <p>Client Center</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -78,14 +118,18 @@
 
     </main>
 
+   <!-- TODO build modal -->
 
     <footer>
-        <a href="">disclaimer</a>
-        <!-- modal on click -->
+        <p>disclaimer</p>
     </footer>
 
+    <!-- jQuery -->
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
     <!-- JavaScript -->
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
+    <!-- slick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 </body>
 </html>

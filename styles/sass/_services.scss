@@ -1,0 +1,60 @@
+.services {
+    padding: 40px 0;
+    background: $gray-900;
+    color: white;
+    .service {
+        font-size: clamp(1.3rem, 1.5rem, 2rem);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-weight: 900;
+            font-size: clamp(2.5rem, 3vw, 3rem);
+            color: $lightBlue;
+        }
+
+        .circle {
+            border: 1px white solid;
+            font-size: clamp(1.5rem, 1.8rem, 2.5rem);
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                border: 1px transparent solid;
+            }
+        }
+    }
+    .hide {
+        display: none;
+    }
+    @include media-breakpoint-up(sm) {
+        .hide {
+            display: block;
+        }
+    }
+}
+
+.sectionTwo {
+    background-image: linear-gradient(180deg, rgba(82, 108, 148, 0.3),rgba(255, 255, 255, 0.9));
+    font-family: 'Cinzel', serif;
+    padding: 40px 0;
+    .contact {
+        background: white;
+        border: 1px black solid;
+        padding: 0;
+        div {
+            border: 1px black solid;
+            text-align: center;
+        }
+    }
+}

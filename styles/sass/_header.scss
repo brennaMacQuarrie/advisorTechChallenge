@@ -1,5 +1,8 @@
 header {
-   border: solid $darkPurple 2px;
-   height: 200px;
-   background: pink;
+    height: 30vh;
+    overflow: hidden;
+    border: double white 2px;
+    img {
+        transform: translateY(-15%);
+    }
 }
