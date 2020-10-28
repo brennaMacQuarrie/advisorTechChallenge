@@ -92,6 +92,7 @@
 
 .sectionTwo {
     padding: 50px 0;
+    
     iframe {
         border: 1px black solid;
     }
@@ -99,7 +100,19 @@
         height: 230px;
         h3 {
             font-family: 'Cinzel', serif;
-            text-decoration: underline;
+            position: relative;
+            &::after {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                bottom: 0;
+                z-index: -1;
+                height: 50%;
+                width: 20%;
+                background-color: rgba(84, 187, 249, 0.6);
+                left: calc((100% - 20%) / 2);
+                transform: skewX(-15deg)
+            }
         }
         // each contact item
         div {
@@ -112,6 +125,18 @@
         .info {
             overflow: scroll;
             font-size: clamp(1.2rem, 1.5rem, 2rem);
+        }
+    }
+
+    // mixin:: center pls --> this was not happening with bootstrap 
+    @include media-breakpoint-down(md) {
+        .adjust .videoAdjust {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 20px;
+        }
+        h3::after {
+            width: 40%;
         }
     }
 }

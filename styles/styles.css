@@ -11227,7 +11227,21 @@ header img {
 
 .sectionTwo .contact h3 {
   font-family: 'Cinzel', serif;
-  text-decoration: underline;
+  position: relative;
+}
+
+.sectionTwo .contact h3::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  height: 50%;
+  width: 20%;
+  background-color: rgba(84, 187, 249, 0.6);
+  left: calc((100% - 20%) / 2);
+  -webkit-transform: skewX(-15deg);
+          transform: skewX(-15deg);
 }
 
 .sectionTwo .contact div {
@@ -11240,6 +11254,21 @@ header img {
 .sectionTwo .contact .info {
   overflow: scroll;
   font-size: clamp(1.2rem, 1.5rem, 2rem);
+}
+
+@media (max-width: 991.98px) {
+  .sectionTwo .adjust .videoAdjust {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 20px;
+  }
+  .sectionTwo h3::after {
+    width: 40%;
+  }
 }
 
 footer {
