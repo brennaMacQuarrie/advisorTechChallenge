@@ -11179,6 +11179,9 @@ header img {
             flex-direction: row;
     margin-top: 20px;
   }
+  .services .left .text {
+    width: 70%;
+  }
 }
 
 .services .hide {
