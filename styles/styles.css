@@ -6292,7 +6292,7 @@ a.close.disabled {
 
 .modal {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   z-index: 1050;
   display: none;
@@ -6404,13 +6404,11 @@ a.close.disabled {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: center;
   width: 100%;
   pointer-events: auto;
   background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
-  outline: 0;
+  border: 4px #6c757d solid;
 }
 
 .modal-backdrop {
@@ -6516,7 +6514,7 @@ a.close.disabled {
     height: min-content;
   }
   .modal-sm {
-    max-width: 300px;
+    max-width: 50%;
   }
 }
 
@@ -11088,9 +11086,9 @@ p {
 }
 
 header {
-  height: 30vh;
   overflow: hidden;
   border: double white 2px;
+  height: 40vh;
 }
 
 header img {
@@ -11099,9 +11097,11 @@ header img {
 }
 
 .services {
-  padding: 40px 0;
+  padding: 50px 0 75px;
   background: #212529;
   color: white;
+  -webkit-clip-path: polygon(100% 0, 100% 82%, 50% 100%, 0 82%, 0 0);
+          clip-path: polygon(100% 0, 100% 82%, 50% 100%, 0 82%, 0 0);
 }
 
 .services .service {
@@ -11132,8 +11132,10 @@ header img {
 .services .service .circle {
   border: 1px white solid;
   font-size: clamp(1.5rem, 1.8rem, 2.5rem);
+  text-align: center;
   height: 40px;
   width: 40px;
+  margin: 10px;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11144,13 +11146,23 @@ header img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 .services .service .circle:hover, .services .service .circle:focus {
   border: 1px transparent solid;
+}
+
+@media (max-width: 767.98px) {
+  .services .left {
+    text-align: left;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 20px;
+  }
 }
 
 .services .hide {
@@ -11164,16 +11176,16 @@ header img {
 }
 
 .sectionTwo {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(82, 108, 148, 0.3)), to(rgba(255, 255, 255, 0.9)));
-  background-image: linear-gradient(180deg, rgba(82, 108, 148, 0.3), rgba(255, 255, 255, 0.9));
-  font-family: 'Cinzel', serif;
   padding: 40px 0;
 }
 
 .sectionTwo .contact {
-  background: white;
-  border: 1px black solid;
+  background: transparent;
   padding: 0;
+}
+
+.sectionTwo .contact h3 {
+  font-family: 'Cinzel', serif;
 }
 
 .sectionTwo .contact div {
@@ -11183,28 +11195,13 @@ header img {
 
 footer {
   text-align: center;
-  background: black;
+  background: #212529;
+  border-top: 2px double #54BBF9;
   position: relative;
 }
 
 footer p {
-  color: white;
+  color: #54BBF9;
   margin-bottom: 0;
   cursor: pointer;
-}
-
-.modal {
-  opacity: 0;
-  width: 80px;
-  height: 80px;
-  background: white;
-  color: black;
-  border-radius: 50%;
-  -webkit-transition: 0.6s all;
-  transition: 0.6s all;
-  display: block;
-}
-
-.active {
-  opacity: 1;
 }

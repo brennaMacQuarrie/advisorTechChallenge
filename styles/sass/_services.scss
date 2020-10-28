@@ -1,7 +1,8 @@
 .services {
-    padding: 40px 0;
+    padding: 50px 0 75px;
     background: $gray-900;
     color: white;
+    clip-path: polygon(100% 0, 100% 82%, 50% 100%, 0 82%, 0 0);
     .service {
         font-size: clamp(1.3rem, 1.5rem, 2rem);
 
@@ -10,6 +11,7 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+
         h2 {
             font-family: 'Cinzel', serif;
             font-weight: 900;
@@ -20,13 +22,16 @@
         .circle {
             border: 1px white solid;
             font-size: clamp(1.5rem, 1.8rem, 2.5rem);
+            text-align: center;
             height: 40px;
             width: 40px;
+            margin: 10px;
             border-radius: 50%;
+
             display: flex;
             justify-content: center;
             align-items: center;
-            text-align: center;
+
             transition: all 0.5s;
             &:hover,
             &:focus {
@@ -34,6 +39,15 @@
             }
         }
     }
+
+    @include media-breakpoint-between(xs,sm) {
+        .left {
+            text-align: left;
+            flex-direction: row;
+            margin-top: 20px;
+        }
+    }
+
     .hide {
         display: none;
     }
@@ -45,16 +59,17 @@
 }
 
 .sectionTwo {
-    background-image: linear-gradient(180deg, rgba(82, 108, 148, 0.3),rgba(255, 255, 255, 0.9));
-    font-family: 'Cinzel', serif;
     padding: 40px 0;
     .contact {
-        background: white;
-        border: 1px black solid;
+        background: transparent;
         padding: 0;
+        h3 {
+            font-family: 'Cinzel', serif;
+        }
         div {
             border: 1px black solid;
             text-align: center;
         }
     }
 }
+
